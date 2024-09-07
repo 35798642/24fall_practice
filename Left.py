@@ -12,6 +12,8 @@ from pprint import pprint
 import paddle
 import paddlehub as hub
 from paddlenlp import Taskflow
+import erniebot
+
 
 class InputText(QWidget):
     def __init__(self,table):
@@ -19,7 +21,7 @@ class InputText(QWidget):
 
         self.textEdit = QTextEdit(self)
         self.textEdit.setPlaceholderText("请在此处输入案卷文本")
-        self.textEdit.setStyleSheet("color: black; background: transparent;")
+        self.textEdit.setStyleSheet("color: black; background: transparent")
         self.textEdit.setFont(QFont("Times",13))
 
         self.table=table
@@ -45,14 +47,26 @@ class InputText(QWidget):
     
     def submit(self):
         text = self.textEdit.toPlainText()
-        print(text)
-        schema = ['案件编号','法院', {'原告': '委托代理人'}, {'被告': '委托代理人'},'时间','一案','裁定','罪名']  # Define the schema for entity extraction
+        # print(text)
+        schema = ['案件编号','法院', {'原告': '委托代理人'}, {'被告': '委托代理人'},'时间','一案','裁定','案情','案由','罪','判决结果']  # Define the schema for entity extraction
         ie = Taskflow('information_extraction', schema=schema, model='uie-m-base')
         ie.set_schema(schema)
         ie_results = ie(text)
         pprint(ie_results)
         self.display_ie_results(ie_results)
         self.display_extracted_results(ie_results)
+        # erniebot.api_type = 'aistudio'
+        # erniebot.access_token = '3f080f245967c292ea4d0fe159854a364cdb7e59'
+
+        # response = erniebot.ChatCompletion.create(
+        # model='ernie-3.5',
+        # messages=[{
+        # 'role': 'user',
+        # 'content': text+"对于上述法律文书，我需要提取案件编号、案由、法院、原告或者公诉方、被告、审判员、审判时间、裁定、罪名等信息。返回格式为字典类型,要求"
+        # }])
+
+        # print(response.get_result())
+
         
     def display_ie_results(self, ie_results):
         cursor = self.textEdit.textCursor()
@@ -128,7 +142,7 @@ class InputFile(QWidget):
 
         # 左侧较窄的ListWidget，用于显示文件名和删除按钮
         self.file_list_widget = ListWidget(self)
-        self.file_list_widget.setStyleSheet("color: black; background: transparent;")
+        self.file_list_widget.setStyleSheet("color: black; background: transparent;border: 1px solid #b0b0b0;")
         self.file_list_widget.setMinimumWidth(150)
         self.file_list_widget.setMaximumWidth(150)
         self.file_list_widget.itemClicked.connect(self.display_file_content)
@@ -291,7 +305,7 @@ class InputFile(QWidget):
                         content += page.get_text()
 
             # 提取信息
-            schema = ['案件编号', '法院', {'原告': '委托代理人'}, {'被告': '委托代理人'}, '时间', '一案', '裁定', '罪名']
+            schema = ['案件编号', '案情','罪名','法院', {'原告': '委托代理人'}, {'被告': '委托代理人'}, '审判员','时间', '裁定']
             ie = Taskflow('information_extraction', schema=schema, model='uie-m-base')
             ie.set_schema(schema)
             ie_results = ie(content)

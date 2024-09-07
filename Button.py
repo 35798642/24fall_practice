@@ -77,6 +77,7 @@ class ImportButton(ButtonView):
         self.menu.addAction(action_csv)
         self.menu.addAction(action_excel)
         self.transparentDropDownPushButton = TransparentDropDownPushButton(QIcon("img/导入.png"), '导入')
+
         self.transparentDropDownPushButton.setMenu(self.menu)
 
         layout = QHBoxLayout()
@@ -129,6 +130,7 @@ class ExportButton(ButtonView):
         self.menu.addAction(action_csv)
         self.menu.addAction(action_excel)
         self.transparentDropDownPushButton = TransparentDropDownPushButton(QIcon("img/导出.png"), '导出')
+        
         self.transparentDropDownPushButton.setMenu(self.menu)
 
         # 创建布局，并将按钮添加到布局中
