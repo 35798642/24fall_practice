@@ -49,7 +49,16 @@ git clone https://github.com/35798642/24fall_practice.git
 ```
 2. Pip install dependence
 ```sh
-pip install xxx
+pip install openpyxl
+pip install csv
+pip install pandas
+pip install PyQt5
+pip install PyQt-Fluent-Widgets
+pip install textract
+pip install frontend
+pip install pymupdf
+pip install paddlepaddle
+pip install paddlenlp
 ```
 ###### **运行**
 ```sh
@@ -103,19 +112,17 @@ filetree
 ### 作者
 
 2565039577@qq.com
+
 673787610@qq.com
+
 1612594623@qq.com
+
 1357775985@qq.com
 
 ### 鸣谢
-
-
-- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-- [Img Shields](https://shields.io)
-- [Choose an Open Source License](https://choosealicense.com)
-- [GitHub Pages](https://pages.github.com)
-- [Animate.css](https://daneden.github.io/animate.css)
-- [xxxxxxxxxxxxxx](https://connoratherton.com/loaders)
+- [Paddle](https://github.com/PaddlePaddle/PaddleNLP/tree/develop/model_zoo/uie)
+- [UIE](https://arxiv.org/pdf/2203.12277.pdf)
+- [whitepaper](https://arxiv.org/pdf/1806.08342.pdf)
 
 <!-- links -->
 [your-project-path]:35798642/24fall_practice
