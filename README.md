@@ -32,12 +32,20 @@
 ###### 开发前的配置要求
 
 1. python >= 3.9.0
-2. 
+2. openpyxl
+3. csv
+4. pandas
+5. pyqt5
+6. PyQt-Fluent-Widgets
+7. textract
+8. frontend
+9. pymupdf
+10. paddle
+11. paddlehub
 
 ###### **安装步骤**
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
 
 ```sh
 git clone https://github.com/35798642/24fall_practice.git
