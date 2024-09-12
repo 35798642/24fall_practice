@@ -35,7 +35,7 @@
 2. openpyxl
 3. csv
 4. pandas
-5. pyqt5
+5. PyQt5
 6. PyQt-Fluent-Widgets
 7. textract
 8. frontend
@@ -49,6 +49,10 @@
 
 ```sh
 git clone https://github.com/35798642/24fall_practice.git
+```
+2. Pip install dependence
+```sh
+pip install xxx
 ```
 
 ### 文件目录说明
@@ -74,17 +78,6 @@ filetree
 
 ```
 
-
-
-
-
-### 开发的架构 
-
-请阅读[ARCHITECTURE.md](https://github.com/35798642/24fall_practice/blob/master/ARCHITECTURE.md) 查阅为该项目的架构。
-
-### 部署
-
-暂无
 
 ### 使用到的框架
 
