@@ -40,8 +40,8 @@
 7. textract
 8. frontend
 9. pymupdf
-10. paddle
-11. paddlehub
+10. paddlepaddle
+11. paddlenlp
 
 ###### **安装步骤**
 
