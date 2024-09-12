@@ -10,7 +10,6 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
  
@@ -21,8 +20,7 @@
   - [安装步骤](#安装步骤)
 - [文件目录说明](#文件目录说明)
 - [使用到的框架](#使用到的框架)
-- [贡献者](#贡献者)
-  - [如何参与开源项目](#如何参与开源项目)
+- [如何参与开源项目](#如何参与开源项目)
 - [版本控制](#版本控制)
 - [作者](#作者)
 - [鸣谢](#鸣谢)
@@ -58,36 +56,30 @@ eg:
 
 ```
 filetree 
-├── ARCHITECTURE.md
-├── LICENSE.txt
-├── README.md
-├── /account/
-├── /bbs/
-├── /docs/
-│  ├── /rules/
-│  │  ├── backend.txt
-│  │  └── frontend.txt
-├── manage.py
-├── /oa/
-├── /static/
-├── /templates/
-├── useless.md
-└── /util/
+├── __init__.py 初始化文件
+├── README.md 使用文档
+├── /img/ 界面背景图片以及图标
+├── /input/ 输入表格文件示例
+├── /text/
+│  ├── test1.txt
+│  ├── test2.docx
+│  ├── test3.pdf
+├── Main.py 主函数，运行该文件
+├── Button.py 按钮类，设置按钮样式并绑定监听信号
+├── Left.py 界面左窗口，包括文本和文件输入功能、关键信息提取、高亮功能
+├── SegmentedButton.py 选项卡切换按钮
+├── Table.py 表格类，表格展示、编辑修改、表格格式文件的导入导出
+└── MainWindow.py 主窗口，总体布局格式
 
 ```
 
 
 ### 使用到的框架
 
-- [xxxxxxx](https://getbootstrap.com)
-- [xxxxxxx](https://jquery.com)
-- [xxxxxxx](https://laravel.com)
+- [PyQt5](https://pypi.org/project/PyQt5/)
+- [Paddlepaddle](https://www.paddlepaddle.org.cn)
 
-### 贡献者
-
-请阅读**CONTRIBUTING.md** 查阅为该项目做出贡献的开发者。
-
-#### 如何参与开源项目
+### 如何参与开源项目
 
 贡献使开源社区成为一个学习、激励和创造的绝佳场所。你所作的任何贡献都是**非常感谢**的。
 
@@ -106,15 +98,10 @@ filetree
 
 ### 作者
 
-xxx@xxxx
-
-知乎:xxxx  &ensp; qq:xxxxxx    
-
- *您也可以在贡献者名单中参看所有参与该项目的开发者。*
-
-### 版权说明
-
-该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt](https://github.com/35798642/24fall_practice/blob/master/LICENSE.txt)
+2565039577@qq.com
+673787610@qq.com
+1612594623@qq.com
+1357775985@qq.com
 
 ### 鸣谢
 
